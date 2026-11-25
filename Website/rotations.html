@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rotations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="homepage.html" class="logo">
+      <span class="logo-top">Beginner's Guide</span>
+      <span class="logo-bottom"><small>to</small> ORTSOC</span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="homepage.html">Homepage</a></li>
+        <li><a href="guide.html">The Guide</a></li>
+        <li><a href="rotations.html" class="active">Rotations</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="columns equal">
+
+      <section class="card text-left">
+        <h1>Rotation Overview:</h1>
+        <p>
+          ORTSOC follows a hospital clinical rotation format with rotations occurring every five
+          weeks. Each rotation is meant to equip students with a myriad of Cybersecurity skills
+          they could use in their future jobs. ORTSOC has multiple rotations so that students can
+          experience different forms of Cybersecurity and see which type suits their future career
+          best.<br>
+          To the right side of this page, is a list and overview of each rotation.
+        </p>
+      </section>
+
+      <section class="tabs-box">
+        <div class="tab-row">
+          <button type="button" class="tab tab1" data-target="assessment">Security Assessment</button>
+          <button type="button" class="tab tab2" data-target="monitoring">Network &amp; Security Monitoring</button>
+          <button type="button" class="tab tab3" data-target="engineering">Security Engineering</button>
+          <button type="button" class="tab tab4" data-target="pentest">Penetration Testing</button>
+          <button type="button" class="tab tab5" data-target="intel">Threat Intelligence</button>
+        </div>
+
+        <div class="panel panel1 show" id="assessment">
+          <h2>Cybersecurity Assessment:</h2>
+          <p>
+            The Cybersecurity Assessment rotation emphasizes learning and practicing Cybersecurity
+            assessments which assist clients in improving their security posture. Working with an
+            ORTSOC client, your team will select a framework appropriate to the client's
+            Cybersecurity goals and conduct an assessment. Our guide information on Cybersecurity
+            Assessment is in the first chapter of the guide:
+          </p>
+          <a href="beginners-guide.pdf">Beginner's Guide to ORTSOC/Chap1</a>
+        </div>
+
+        <div class="panel panel2" id="monitoring">
+          <h2>Network &amp; Security Monitoring:</h2>
+          <p>
+            In the Network Security Monitoring and Incident Response rotation, you will monitor,
+            analyze, investigate, and report on security events and incidents. The severity of an
+            event, whether it is a security event or a security incident, will be determined by you
+            and your peers conducting the investigation. Our guide information on Network &amp;
+            Security Monitoring is in the second chapter of the guide:
+          </p>
+          <a href="beginners-guide.pdf">Beginner's Guide to ORTSOC/Chap2</a>
+        </div>
+
+        <div class="panel panel3" id="engineering">
+          <h2>Security Engineering:</h2>
+          <p>
+            In the Security Engineering rotation, you will be focusing on applying security
+            principles to support and strengthening ORTSOC. You will gain hands-on experience
+            designing, implementing, and maintaining both virtual and physical infrastructures that
+            enable secure monitoring of client systems. Our guide information on Security
+            Engineering is in the third chapter of the guide:
+          </p>
+          <a href="beginners-guide.pdf">Beginner's Guide to ORTSOC/Chap3</a>
+        </div>
+
+        <div class="panel panel4" id="pentest">
+          <h2>Penetration Testing:</h2>
+          <p>
+            Penetration testers use many similar tactics, techniques, and procedures (TTP) as
+            malicious attackers to find and demonstrate the business impact a weakness may result
+            in. You will learn about and use these TTPs to conduct a penetration test. You will be
+            expected to conduct penetration testing operations against client infrastructure. Our
+            guide information on Penetration Testing is in the fourth chapter of the guide:
+          </p>
+          <a href="beginners-guide.pdf">Beginner's Guide to ORTSOC/Chap4</a>
+        </div>
+
+        <div class="panel panel5" id="intel">
+          <h2>Threat Intelligence:</h2>
+          <p>
+            Threat Intelligence is evidence-based knowledge about current or emerging Cybersecurity
+            threats. It enables students to better understand potential threats. Throughout this
+            rotation you will engage with real-world scenarios and current threat landscapes to
+            develop practical skills in threat profiling and vulnerability assessment. Our guide
+            information on Threat Intelligence is in the fifth chapter of the guide:
+          </p>
+          <a href="beginners-guide.pdf">Beginner's Guide to ORTSOC/Chap5</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    const tabs = document.querySelectorAll(".tab");
+    const panels = document.querySelectorAll(".panel");
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        panels.forEach(function (panel) {
+          panel.classList.remove("show");
+        });
+        document.getElementById(tab.dataset.target).classList.add("show");
+      });
+    });
+  </script>
+
+</body>
+</html>

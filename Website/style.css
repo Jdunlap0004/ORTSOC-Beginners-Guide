@@ -159,3 +159,81 @@ main {
 .text-left h2:first-child {
   margin-top: 0;
 }
+
+.columns.equal .card {
+  flex: 1;
+}
+
+.tabs-box {
+  flex: 1.15;
+}
+
+.tab-row {
+  display: flex;
+  gap: 2px;
+}
+
+.tab {
+  flex: 1;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  color: white;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.15;
+  padding: 7px 4px;
+  cursor: pointer;
+}
+
+.tab1 { background-color: #b8b8b8; }
+.tab2 { background-color: #9a9a9a; }
+.tab3 { background-color: #6e6e6e; }
+.tab4 { background-color: #4a4a4a; }
+.tab5 { background-color: #2b2b2b; }
+
+.panel {
+  display: none;
+  color: white;
+  text-align: left;
+  padding: 10px 12px 18px;
+  border-radius: 0 0 8px 8px;
+  line-height: 1.35;
+}
+
+.panel.show {
+  display: block;
+}
+
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.panel p {
+  margin: 0;
+}
+
+.panel1 { background-color: #b8b8b8; }
+.panel2 { background-color: #9a9a9a; }
+.panel3 { background-color: #6e6e6e; }
+.panel4 { background-color: #4a4a4a; }
+.panel5 { background-color: #2b2b2b; }
+
+.panel1 a,
+.panel2 a,
+.panel3 a {
+  color: #4259b3;
+}
+
+.panel4 a,
+.panel5 a {
+  color: #5b78d0;
+}
+
+@media (max-width: 700px) {
+  .tabs-box {
+    width: 100%;
+  }
+}
